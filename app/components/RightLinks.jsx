@@ -34,7 +34,7 @@ const RightLinks = () => {
       </ul>
       <Link href="/cartPage" className="relative w-5 h-5 ms-5">
         <Image
-          src="/cart.png"
+          src="/cartIcon.png"
           alt="cart_image"
           fill
           className="object-contain"
@@ -46,7 +46,7 @@ const RightLinks = () => {
 
       <div className="relative w-5 h-5 ms-5">
         <Image
-          src="/search.png"
+          src="/searchIcon.png"
           alt="search_image"
           fill
           className="object-contain"
