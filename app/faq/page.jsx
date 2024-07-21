@@ -18,7 +18,7 @@ const page = () => {
               "linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))",
           }}
         ></div>
-        <Image src="/contact.png" alt="help-image" fill objectFit="contain " />
+        <Image src="/contact.png" alt="help-image" fill objectFit="cover" />
       </div>
 
       <Frequently />
