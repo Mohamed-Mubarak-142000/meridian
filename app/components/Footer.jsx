@@ -24,7 +24,7 @@ const Footer = () => {
           className="cover xl:contain"
         />
 
-        <div className="container px-5 lg:px-12 absolute top-[50%] transform translate-y-[-50%] left-[30%] translate-x-[-30%] flex items-center justify-center xl:justify-between flex-wrap gap-3">
+        <div className="container px-5 lg:px-12 absolute top-[50%] transform translate-y-[-50%] left-[30%] translate-x-[-30%] flex items-center justify-center xl:justify-between flex-wrap gap-3 lg:gap-0">
           <div className="w-full lg:w-1/2 flex items-start justify-start flex-col ">
             <h2 className="text-[35px] capitalize text-text_white font-bold my-5">
               How Can We Help You?
