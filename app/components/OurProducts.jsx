@@ -20,7 +20,7 @@ const OurProducts = () => {
         }}
       ></div>
 
-      <div className="absolute w-[900px] h-[443px] top-[50%] left-[50%] transform flex flex-col items-center justify-center gap-3 translate-x-[-50%] translate-y-[-50%] text-center">
+      <div className="absolute w-[90%] xl:w-[70%] mx-auto h-[443px] top-[50%] left-[50%] transform flex flex-col items-center justify-center gap-3 translate-x-[-50%] translate-y-[-50%] text-center">
         <div className="w-[100px] h-[100px] relative">
           <Image
             src="/pen.png"
@@ -34,7 +34,7 @@ const OurProducts = () => {
           COMMITTED TO EUROPEAN MANUFACTURING
         </p>
 
-        <p className="font-normal text-[40px] text-text_white">
+        <p className="font-normal text-[30px] xl:text-[40px] text-text_white">
           Our products are made with high quality European fabric and sewn by a
           small team of craftspeople in Europe.
         </p>

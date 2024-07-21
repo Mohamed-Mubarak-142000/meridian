@@ -3,7 +3,7 @@ import OneCollection from "./OneCollection";
 
 const TopCollections = ({ collectionsList }) => {
   return (
-    <section className="container my-10 flex items-center justify-between gap-1 flex-wrap">
+    <section className="container my-10 flex items-center justify-center xl:justify-center gap-1 flex-wrap">
       {collectionsList.map((item, index) => (
         <OneCollection
           key={item.id}

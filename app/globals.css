@@ -2,19 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
-    .container{
-        @apply mx-auto p-2 w-full sm:w-[576px] md:w-[768px] lg:w-[992px] xl:w-[1200px] 2xl:w-[1400px];
-    }
-    
-    .btn-styling {
-        @apply tracking-[5px] font-light w-full h-full uppercase outline-none border-none text-text_white bg-bg_btn;
-    }
+  .container {
+    @apply mx-auto p-2 w-full sm:w-[576px] md:w-[768px] lg:w-[992px] xl:w-[1200px] 2xl:w-[1400px];
+  }
+
+  .btn-styling {
+    @apply tracking-[5px] font-light w-full h-full uppercase outline-none border-none text-text_white bg-bg_btn;
+  }
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
+/************************************************** */
+
+.categoryStyling {
+  display: none;
+  list-style-type: none;
+  padding: 0;
 }
-  
+
+.categoryStyling.show {
+  display: block;
+}
+
+.categoryStyling h2 {
+  cursor: pointer;
+}
+
+.categoryStyling h2:hover {
+  color: blue;
+}
+
+/************************************ */
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.priceDisplay {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.rangeInput {
+  width: 80%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: rgb(0, 110, 255);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.rangeInput::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: rgb(0, 110, 255);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.showResponsive {
+  display: flex;
+}

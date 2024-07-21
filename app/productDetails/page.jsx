@@ -4,11 +4,16 @@ import InfoDetails from "../components/InfoDetails";
 import ImageDetail from "../components/ImageDetail";
 import Image from "next/image";
 import Frequently from "../components/Frequently";
+import PopularProduct from "../components/PopularProduct";
+import ReviewsProduct from "../components/ReviewsProduct";
 
 const page = () => {
   return (
     <section className="container my-10">
-      <BreadCrumb />
+      <BreadCrumb
+        pathname1={"product details"}
+        pathname2={"Siam Set 1 – 6 piece Corner"}
+      />
       <div className="flex items-start justify-around flex-wrap">
         <ImageDetail />
         <InfoDetails />
@@ -43,8 +48,9 @@ const page = () => {
             repudiandae libero consectetur adipisci?
           </p>
         </div>
-
         <Frequently />
+        <PopularProduct />
+        <ReviewsProduct />
       </section>
     </section>
   );

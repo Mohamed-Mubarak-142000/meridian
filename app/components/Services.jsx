@@ -29,7 +29,7 @@ const Services = () => {
           <div
             key={item.id}
             className={`w-full lg:w-1/2 xl:w-1/3 flex items-center justify-center flex-col gap-2 py-5 ${
-              item.id === 3 ? "" : "border-r border-text_link_light"
+              item.id === 3 ? "" : "border-0 xl:border-r border-text_link_light"
             } `}
           >
             <div className="relative w-[150px] h-[100px] my-2">

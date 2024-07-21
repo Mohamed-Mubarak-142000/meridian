@@ -1,8 +1,7 @@
 import React from "react";
-
 import SwiperProducts from "./SwiperProducts";
 
-const ReadToShip = () => {
+const PopularProduct = () => {
   const slides = [
     {
       id: 7,
@@ -53,15 +52,12 @@ const ReadToShip = () => {
       price: "$795.00",
     },
   ];
-
   return (
-    <section className="container my-10">
+    <section className="container my-5">
       <div className="w-full flex items-center justify-center flex-col gap-2 my-5">
-        <h1 className="capitalize text-[40px] font-bold">Ready To Ship</h1>
-        <p className="font-500 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est id
-          pretium pellentesque leo. Lorem.
-        </p>
+        <h1 className="capitalize text-[40px] font-bold">
+          Shop Our Other Popular Sets
+        </h1>
       </div>
 
       <SwiperProducts slides={slides} />
@@ -69,4 +65,4 @@ const ReadToShip = () => {
   );
 };
 
-export default ReadToShip;
+export default PopularProduct;

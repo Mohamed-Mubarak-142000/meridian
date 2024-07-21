@@ -66,24 +66,49 @@ const Frequently = () => {
       <div key={item.id} className="w-full">
         <button
           type="button"
-          className={` text-[20px] text-text_black ${
-            contentQuestion === item.id
-              ? "transition duration-150 border-b border-b-text_link_dark text-text_link_dark"
-              : ""
-          }`}
+          className={`text-[20px] border border-text_link_light w-full p-3 flex items-center justify-between rounded-lg text-start text-text_black`}
           onClick={() => setContentQuestion(item.id)}
         >
-          {item.question}
+          <span>{item.question}</span>
+
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </span>
         </button>
 
         <div
-          className={`text-sm tracking-[2px] ${
+          className={`text-sm tracking-[2px] relative ${
             contentQuestion === item.id
-              ? "h-fit border border-[#eee] mt-5 p-5 text-text_black rounded-md shadow-md"
+              ? "h-fit border border-text_link_light mt-5 p-5 text-text_black rounded-lg"
               : "h-[0px] overflow-hidden"
           }`}
         >
           {renderContent()}
+          <span className="absolute top-1 right-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
+            </svg>
+          </span>
         </div>
       </div>
     ));
@@ -93,11 +118,12 @@ const Frequently = () => {
     const itemContent = dataFrq.find((item) => item.id === contentQuestion);
     return itemContent ? <p>{itemContent.answer}</p> : null;
   };
+
   return (
     <div className=" my-10 px-10">
       <h1 className="text-[30px] font-bold">Frequently Asked Questions</h1>
 
-      <div className=" my-5 p-2 w-full flex flex-col items-center text-text_link_light gap-5">
+      <div className=" my-5 p-2 w-full flex flex-col items-start justify-start text-text_link_light gap-5">
         {renderQuestion()}
       </div>
     </div>

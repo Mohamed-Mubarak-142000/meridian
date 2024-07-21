@@ -1,8 +1,8 @@
 import React from "react";
 
-const BreadCrumb = () => {
+const BreadCrumb = ({ pathname1, pathname2 }) => {
   return (
-    <nav aria-label="Breadcrumb">
+    <nav aria-label="Breadcrumb" className="hidden xl:block">
       <ol className="flex items-center gap-1 text-sm text-text_link_dark">
         <li>
           <a
@@ -48,8 +48,7 @@ const BreadCrumb = () => {
             href="#"
             className="block transition hover:font-semibold hover:text-text_black"
           >
-            {" "}
-            Shirts{" "}
+            {pathname1}
           </a>
         </li>
 
@@ -73,8 +72,7 @@ const BreadCrumb = () => {
             href="#"
             className="block transition hover:font-semibold hover:text-text_black"
           >
-            {" "}
-            Plain Tee{" "}
+            {pathname2}
           </a>
         </li>
       </ol>
