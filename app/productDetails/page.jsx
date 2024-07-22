@@ -14,12 +14,12 @@ const page = () => {
         pathname1={"product details"}
         pathname2={"Siam Set 1 – 6 piece Corner"}
       />
-      <div className="flex items-start justify-around flex-wrap">
+      <div className="flex items-start justify-around flex-wrap ">
         <ImageDetail />
         <InfoDetails />
       </div>
 
-      <section className="flex items-center justify-between flex-wrap my-10 pe-10">
+      <section className="flex items-center justify-between flex-wrap my-10 lg:pe-10">
         <div className="relative w-full h-[400px] lg:w-1/2">
           <Image src="/MishaGrey.png" alt="image" fill objectFit="contain" />
         </div>

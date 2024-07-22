@@ -4,7 +4,10 @@ import React from "react";
 
 const OneProduct = ({ item }) => {
   return (
-    <Link href={"/productDetails"} className="w-full lg:w-[300px] p-5 rounded">
+    <Link
+      href={"/productDetails"}
+      className="w-full md:w-[45%] lg:w-[300px] p-5 rounded"
+    >
       <div className="relative w-full h-[250px] ">
         <Image src={item.imageSlider} alt="image" fill objectFit="contain" />
       </div>

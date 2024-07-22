@@ -49,14 +49,14 @@ const InfoDetails = () => {
     return itemContent ? <p>{itemContent.desc}</p> : null;
   };
   return (
-    <section className="">
-      <h2 className="text-[30px] my-5">Alma Velvet Armless</h2>
+    <section className="w-full lg:w-[45%]">
+      <h2 className="text-[25px] lg:text-[30px] my-5">Alma Velvet Armless</h2>
       <div className="flex items-center gap-2 my-5">
         <span className="text-[#fe595e]">£1,500.00</span>
         <span className="text-text_link_light line-through">£2,500.00</span>
         <span className="text-[#fe595e]">40% Off</span>
       </div>
-      <div className="flex items-center gap-1">
+      <div className="flex lg:items-center items-start flex-wrap gap-4">
         <div className="w-[150px] h-[20px] relative">
           <Image src={"/stars.png"} alt="stars" fill objectFit="contain" />
         </div>
@@ -133,10 +133,12 @@ const InfoDetails = () => {
         </div>
       </div>
 
-      <div className=" my-5 p-2 w-[450px] flex items-center text-text_link_light gap-5">
+      <div className=" my-5 p-2 w-full lg:w-[450px] flex items-center text-text_link_light gap-5">
         {renderLinksTab()}
       </div>
-      <div className="text-sm tracking-[2px] p-2 w-[450px] ">{renderContent()}</div>
+      <div className="text-sm lg:tracking-[2px] p-2 w-full lg:w-[450px] ">
+        {renderContent()}
+      </div>
     </section>
   );
 };

@@ -21,15 +21,15 @@ const page = () => {
       </div>
 
       <section className="container my-10">
-        <div className="flex flex-col gap-2 items-center justify-center">
+        <div className="flex flex-col gap-2 items-center justify-center text-center ">
           <h1 className="text-[35px] my-5">We Ready To Help</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
             nulla a ut diam et, sapien dis
           </p>
 
-          <div className="flex items-center justify-around w-full lg:w-[80%] mx-auto my-10">
-            <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center xl:justify-around flex-wrap gap-10 xl:gap-0 w-full lg:w-[80%] mx-auto my-10">
+            <div className="flex items-center gap-3 w-full xl:w-1/3">
               <Image
                 src={"/phone.png"}
                 alt="image"
@@ -38,7 +38,7 @@ const page = () => {
                 objectFit="contain"
               />
 
-              <p className="flex flex-col gap-2">
+              <p className="flex flex-col items-start gap-2">
                 <span className="tracking-[3px] text-text_link_light uppercase">
                   Phone Number
                 </span>
@@ -46,7 +46,7 @@ const page = () => {
               </p>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 w-full xl:w-1/3">
               <Image
                 src={"/message.png"}
                 alt="image"
@@ -55,7 +55,7 @@ const page = () => {
                 objectFit="contain"
               />
 
-              <p className="flex flex-col gap-2">
+              <p className="flex flex-col gap-2  items-start ">
                 <span className="tracking-[3px] text-text_link_light uppercase">
                   Email
                 </span>
@@ -63,7 +63,7 @@ const page = () => {
               </p>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 w-full xl:w-1/3">
               <Image
                 src={"/location.png"}
                 alt="image"
@@ -72,7 +72,7 @@ const page = () => {
                 objectFit="contain"
               />
 
-              <p className="flex flex-col gap-2">
+              <p className="flex flex-col gap-2  items-start ">
                 <span className="tracking-[3px] text-text_link_light uppercase">
                   Map Street
                 </span>
@@ -87,7 +87,7 @@ const page = () => {
           </p>
         </div>
 
-        <section className="my-10 flex items-center justify-center w-[80%] mx-auto ">
+        <section className="my-10 flex items-center justify-center w-full xl:w-[80%] mx-auto ">
           <form action="#" className="space-y-4 w-full p-3">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
@@ -128,7 +128,7 @@ const page = () => {
               ></textarea>
             </div>
 
-            <div className="w-[300px] h-[60px] my-5 mx-auto">
+            <div className="w-full xl:w-1/3 h-[60px] my-5 mx-auto">
               <button type="button" className="btn-styling">
                 Send Enquiry
               </button>

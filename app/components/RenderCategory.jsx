@@ -19,7 +19,7 @@ const RenderCategory = ({ collections }) => {
   };
 
   return (
-    <div className=" w-[25%]">
+    <div className="w-full">
       <h2 className="capitalize text-[20px] ">category</h2>
       {collections.map((item) => (
         <OneCategory key={item.id} categoryData={item.categories} />

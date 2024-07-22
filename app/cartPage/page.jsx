@@ -7,7 +7,7 @@ const page = () => {
   return (
     <section className="container my-10">
       <BreadCrumb pathname1={"cart"} pathname2={"shopping cart"} />
-      <div className="flex items-start justify-between gap-5 ">
+      <div className="flex items-start justify-between flex-wrap lg:flex-nowrap lg:gap-5">
         <CartProducts />
         <OrderSummary />
       </div>

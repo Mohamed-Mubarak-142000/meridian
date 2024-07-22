@@ -17,12 +17,12 @@ const ImageDetail = () => {
   };
 
   return (
-    <section className="w-full lg:w-1/2 my-10 border border-[#eee] p-2">
+    <section className="w-full lg:w-[50%] my-2 lg:my-10 border border-[#eee] p-2">
       <div className="w-full h-[500px] relative">
         {renderImage(currentImage)}
       </div>
 
-      <div className="flex items-center justify-evenly gap-5 rounded my-5 p-2">
+      <div className=" w-full flex items-center justify-evenly gap-5 rounded my-5 p-2">
         {listImage.map((item) => (
           <div
             onClick={() => setCurrentImage(item.image)}

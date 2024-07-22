@@ -66,7 +66,7 @@ const Frequently = () => {
       <div key={item.id} className="w-full">
         <button
           type="button"
-          className={`text-[20px] border border-text_link_light w-full p-3 flex items-center justify-between rounded-lg text-start text-text_black`}
+          className={`text-[16px] xl:text-[20px] border border-text_link_light w-full p-3 flex items-center justify-between rounded-lg text-start text-text_black`}
           onClick={() => setContentQuestion(item.id)}
         >
           <span>{item.question}</span>
@@ -90,7 +90,7 @@ const Frequently = () => {
         </button>
 
         <div
-          className={`text-sm tracking-[2px] relative ${
+          className={`text-sm xl:tracking-[2px] relative ${
             contentQuestion === item.id
               ? "h-fit border border-text_link_light mt-5 p-5 text-text_black rounded-lg"
               : "h-[0px] overflow-hidden"
@@ -120,8 +120,8 @@ const Frequently = () => {
   };
 
   return (
-    <div className=" my-10 px-10">
-      <h1 className="text-[30px] font-bold">Frequently Asked Questions</h1>
+    <div className=" my-10 xl:px-10">
+      <h1 className="text-[30px] font-bold px-5">Frequently Asked Questions</h1>
 
       <div className=" my-5 p-2 w-full flex flex-col items-start justify-start text-text_link_light gap-5">
         {renderQuestion()}

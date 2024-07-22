@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import BreadCrumb from "../components/BreadCrumb";
 import Image from "next/image";
 import RenderCategory from "../components/RenderCategory";
@@ -178,12 +179,17 @@ const page = () => {
       },
     },
   ];
+  const [showCat, setShowCat] = useState(false);
+
+  const handleToggleCat = () => {
+    setShowCat(!showCat);
+  };
 
   return (
-    <section className="container xl:my-10">
+    <section className="container mx-auto xl:my-10 px-4">
       <BreadCrumb pathname1={"collection"} pathname2={"products"} />
 
-      <div className="w-full h-[320px] relative xl:my-5">
+      <div className="relative h-[320px] my-5">
         <div
           style={{
             position: "absolute",
@@ -198,43 +204,44 @@ const page = () => {
         ></div>
         <Image
           src="/collctionPage.png"
-          alt="help-image"
-          fill
-          objectFit="cover "
+          alt="collection-background"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full"
         />
-
-        <div className="container px-5 lg:px-12  absolute top-[50%] transform translate-y-[-50%] left-[50%] translate-x-[-50%] flex flex-col items-center justify-center gap-3">
-          <h2 className=" text-[20px] xl:text-[35px] capitalize text-text_white ">
-            Two Day Sale - Up To 40% Off{" "}
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center text-text_white">
+          <h2 className="text-[20px] xl:text-[35px] capitalize">
+            Two Day Sale - Up To 40% Off
           </h2>
-
-          <h2 className="text-[20px] xl:text-[35px] capitalize text-text_white ">
+          <h2 className="text-[20px] text-text_white xl:text-[35px] capitalize">
             20 : 10 : 08 : 20
           </h2>
-
-          <p className="text-text_white font-normal text-[16px] tracking-[5px] ">
+          <p className="font-normal text-[16px] text-text_white tracking-[5px]">
             Ending Soon!
           </p>
         </div>
       </div>
 
-      <div className="flex items-center justify-between flex-wrap-reverse">
+      <div className="flex flex-wrap items-start justify-between">
         <h2 className="text-[20px] mt-3 xl:text-[30px] font-semibold capitalize">
-          collection
+          Collection
         </h2>
-        <p className="w-1/2 lg:w-fit text-[12px] lg:text-[18px] mt-3">
-          showing-1-24 of 557 Products
+        <p className="w-full lg:w-auto text-[12px] lg:text-[18px] mt-3">
+          Showing 1-24 of 557 Products
         </p>
 
-        <div className="w-1/2 lg:hidden p-2 flex items-center gap-2">
-          <span>
+        <div className="w-full lg:w-[45%] my-2 relative lg:hidden">
+          <p
+            className="p-[7px] rounded-md flex items-center gap-2 border border-text_link_light cursor-pointer"
+            onClick={handleToggleCat}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="w-6 h-6"
             >
               <path
                 strokeLinecap="round"
@@ -242,23 +249,31 @@ const page = () => {
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
             </svg>
-          </span>
-          <span className="text-[16px] capitalize "> filter</span>
+            <span className="text-[16px] capitalize">Filter</span>
+          </p>
+
+          <div
+            className={`absolute z-40 top-14 w-full border overflow-hidden border-text_link_light rounded-lg p-2 bg-text_white shadow-md transition-transform duration-300 ${
+              showCat ? "translate-x-0 " : "-translate-x-full left-[-20%]"
+            }`}
+          >
+            <RenderCategory collections={collections} />
+          </div>
         </div>
 
-        <div className="flex items-center w-1/2 lg:w-fit">
+        <div className="w-full lg:w-auto flex items-center">
           <label
-            htmlFor="HeadlineAct"
-            className="text-sm w-[100px] hidden lg:block text-text_black"
+            htmlFor="sortBy"
+            className="text-sm hidden lg:block text-text_black"
           >
             Sort by
           </label>
-
           <select
-            name="HeadlineAct"
-            id="HeadlineAct"
-            className=" w-full border-text_link_light border p-2 text-text_black sm:text-sm"
+            name="sortBy"
+            id="sortBy"
+            className="w-full lg:w-auto border-text_link_light border p-2 rounded-md text-text_black sm:text-sm"
           >
+            <option value="">Please select</option>
             <option value="">Please select</option>
             <option value="JM">John Mayer</option>
             <option value="SRV">Stevie Ray Vaughn</option>
@@ -266,13 +281,15 @@ const page = () => {
             <option value="BBK">B.B King</option>
             <option value="AK">Albert King</option>
             <option value="BG">Buddy Guy</option>
-            <option value="EC">Eric Clapton</option>
+            <option value="EC">Eric Clapton</option>{" "}
           </select>
         </div>
       </div>
 
-      <div className="flex items-start justify-between gap-2 my-10">
-        <RenderCategory collections={collections} />
+      <div className="flex items-start justify-center xl:justify-between my-10">
+        <div className="hidden lg:block xl:w-[25%]">
+          <RenderCategory collections={collections} />
+        </div>
         <RenderAllCollection collections={collections} />
       </div>
     </section>

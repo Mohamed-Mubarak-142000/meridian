@@ -3,7 +3,7 @@ import React from "react";
 
 const OrderSummary = () => {
   return (
-    <section className=" w-[30%] mt-5">
+    <section className="w-full lg:w-[30%] lg:mt-5">
       <h2 className="text-[25px] capitalize">order summary</h2>
 
       <div className="border border-text_link_light p-2">

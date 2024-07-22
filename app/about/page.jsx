@@ -40,12 +40,12 @@ const page = () => {
       </div>
 
       <section className="flex items-start justify-between flex-wrap container my-10">
-        <div className="w-full lg:w-1/2 h-[450px] relative">
+        <div className="w-full lg:w-[45%] h-[450px] relative">
           <Image src="/about2.png" alt="help-image" fill objectFit="contain " />
         </div>
-        <div className="w-fll lg:w-1/2">
+        <div className="w-fll lg:w-[45%]">
           <h2 className="text-[35px] my-3">We Are Meridian</h2>
-          <p className=" pe-0 lg:pe-12 leading-8 text-[20px] font-light">
+          <p className=" pe-0 lg:pe-12 leading-8 text-[16px] xl:text-[20px] font-light">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
             nulla a ut diam et, sapien dis. Iaculis turpis dui sed ipsum etiam.
             Habitant feugiat at enim pharetra. Lacus, dolor viverra amet purus

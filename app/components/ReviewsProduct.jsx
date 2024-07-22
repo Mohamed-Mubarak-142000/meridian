@@ -40,12 +40,12 @@ const ReviewsProduct = () => {
   return (
     <section className="container my-5">
       <div className="flex items-center justify-between my-2">
-        <h1 className="text-[35px] text-text_black capitalize ">
+        <h1 className="text-[20px] xl:text-[35px] text-text_black capitalize ">
           review (168)
         </h1>
         <button
           type="button"
-          className="text-text_white capitalize text-[16px] py-3 px-5 bg-color_green"
+          className="text-text_white capitalize text-[14px] xl:text-[16px] py-3 px-5 bg-color_green"
         >
           write a review
         </button>
@@ -55,7 +55,7 @@ const ReviewsProduct = () => {
         return (
           <section
             key={item.id}
-            className="w-full flex items-start justify-between gap-5 my-10 text-text_link_light"
+            className="w-full border-b xl:border-0 flex items-start justify-between flex-wrap xl:flex-nowrap gap-5 my-10 text-text_link_light"
           >
             {/* first col  */}
             <div className="flex flex-col gap-3 w-full lg:w-1/4">

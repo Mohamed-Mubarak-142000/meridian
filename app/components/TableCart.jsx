@@ -21,7 +21,7 @@ const TableCart = () => {
 
       <tbody className="divide-y divide-text_link_light">
         <tr>
-          <td className="whitespace-nowrap px-4 py-2 font-medium text-text_black flex items-center gap-2">
+          <td className="whitespace-nowrap lg:px-4 lg:py-2 font-medium text-text_black flex items-center gap-2">
             <Image
               src="/collection4.png"
               alt="image"
@@ -29,15 +29,15 @@ const TableCart = () => {
               height={100}
               objectFit="cover"
             />
-            <p className="text-[14px] text-text_link_light">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            <p className="text-[14px] text-text_link_light hidden md:block">
+              Lorem ipsum dolor sit, amet consectetur.
             </p>
           </td>
-          <td className="whitespace-nowrap px-4 py-2 text-text_black">
+          <td className="whitespace-nowrap px-4 lg:py-2 text-text_black">
             <div className="border border-text_link_light rounded flex items-center justify-center">
               <button
                 type="button"
-                className="p-1 text-center text-bold text-[25px] me-2"
+                className="p-1 text-center text-bold lg:text-[25px] me-2"
               >
                 +
               </button>
@@ -46,7 +46,7 @@ const TableCart = () => {
               </span>
               <button
                 type="button"
-                className="p-1 text-center text-bold text-[25px] ms-2 border-text_link_light"
+                className="p-1 text-center text-bold lg:text-[25px] ms-2 border-text_link_light"
               >
                 -
               </button>
@@ -74,7 +74,7 @@ const TableCart = () => {
         </tr>
 
         <tr>
-          <td className="whitespace-nowrap px-4 py-2 font-medium text-text_black flex items-center gap-2">
+          <td className="whitespace-nowrap lg:px-4 lg:py-2 font-medium text-text_black flex items-center gap-2">
             <Image
               src="/collection2.png"
               alt="image"
@@ -82,15 +82,15 @@ const TableCart = () => {
               height={100}
               objectFit="cover"
             />
-            <p className="text-[14px] text-text_link_light">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            <p className="text-[14px] text-text_link_light hidden md:block">
+              Lorem ipsum dolor sit, amet consectetur.
             </p>
           </td>
-          <td className="whitespace-nowrap px-4 py-2 text-text_black">
+          <td className="whitespace-nowrap px-4 lg:py-2 text-text_black">
             <div className="border border-text_link_light rounded flex items-center justify-center">
               <button
                 type="button"
-                className="p-1 text-center text-bold text-[25px] me-2"
+                className="p-1 text-center text-bold lg:text-[25px] me-2"
               >
                 +
               </button>
@@ -99,7 +99,7 @@ const TableCart = () => {
               </span>
               <button
                 type="button"
-                className="p-1 text-center text-bold text-[25px] ms-2 border-text_link_light"
+                className="p-1 text-center text-bold lg:text-[25px] ms-2 border-text_link_light"
               >
                 -
               </button>
@@ -127,7 +127,7 @@ const TableCart = () => {
         </tr>
 
         <tr>
-          <td className="whitespace-nowrap px-4 py-2 font-medium text-text_black flex items-center gap-2">
+          <td className="whitespace-nowrap lg:px-4 lg:py-2 font-medium text-text_black flex items-center gap-2">
             <Image
               src="/collection3.png"
               alt="image"
@@ -135,15 +135,15 @@ const TableCart = () => {
               height={100}
               objectFit="cover"
             />
-            <p className="text-[14px] text-text_link_light">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            <p className="lg:text-[14px] text-text_link_light hidden md:block">
+              Lorem ipsum dolor sit, amet consectetur.
             </p>
           </td>
-          <td className="whitespace-nowrap px-4 py-2 text-text_black">
+          <td className="whitespace-nowrap px-4 lg:py-2 text-text_black">
             <div className="border border-text_link_light rounded flex items-center justify-center">
               <button
                 type="button"
-                className="p-1 text-center text-bold text-[25px] me-2"
+                className="p-1 text-center text-bold lg:text-[25px] me-2"
               >
                 +
               </button>
@@ -152,7 +152,7 @@ const TableCart = () => {
               </span>
               <button
                 type="button"
-                className="p-1 text-center text-bold text-[25px] ms-2 border-text_link_light"
+                className="p-1 text-center text-bold lg:text-[25px] ms-2 border-text_link_light"
               >
                 -
               </button>
